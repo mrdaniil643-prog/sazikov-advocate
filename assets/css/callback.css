@@ -1,0 +1,65 @@
+/* Форма перезвона и документы. Используются токены основной темы сайта. */
+.card__callback{margin-top:var(--space-3);font-size:var(--t-sm)}
+.card__callback a{color:var(--seal);text-decoration-thickness:1px;text-underline-offset:.2em}
+.callback{padding-block:clamp(3rem,7vw,5.5rem);border-top:1px solid var(--line)}
+.callback__in{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2.5rem,6vw,5.5rem);align-items:start}
+.callback__eyebrow{color:var(--seal);font-size:var(--t-sm);letter-spacing:.02em}
+.callback__title{font-size:var(--t-xl);margin-top:var(--space-3)}
+.callback__lead{color:var(--ink-2);font-size:var(--t-md);max-width:36ch;margin-top:var(--space-4)}
+.callback__form-wrap{min-width:0}
+.callback-form{display:grid;gap:var(--space-4)}
+.callback-form__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)}
+.callback-field__label{display:block;color:var(--ink-3);font-size:var(--t-xs);margin-bottom:.35rem}
+.callback-field__input{display:block;width:100%;min-height:52px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);font:inherit;font-size:var(--t-base);padding:.65rem 0;transition:border-color .2s ease}
+.callback-field__input::placeholder{color:var(--ink-3);opacity:1}
+.callback-field__input:focus{outline:none;border-bottom-color:var(--seal)}
+.callback-field.is-invalid .callback-field__input{border-bottom-color:#A32A22}
+.callback-field__error{grid-column:1/-1;color:#A32A22;font-size:var(--t-xs);margin-top:.15rem}
+.callback-check{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start;margin-top:var(--space-2)}
+.callback-check__box{appearance:none;width:22px;height:22px;margin:.15rem 0 0;border:1px solid var(--line);border-radius:2px;background:transparent;cursor:pointer;position:relative;flex:none}
+.callback-check__box:checked{background:var(--seal);border-color:var(--seal)}
+.callback-check__box:checked::after{content:'';position:absolute;left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+.callback-check.is-invalid .callback-check__box{border-color:#A32A22}
+.callback-check__label{font-size:var(--t-sm);color:var(--ink-2)}
+.callback-check__label a,.callback-form__legal a{color:var(--seal);text-underline-offset:.18em}
+.callback-form__button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:.9rem 1.6rem;border:1px solid transparent;border-radius:var(--radius);background:var(--seal);color:#fff;font:inherit;font-weight:600;font-size:var(--t-md);cursor:pointer;justify-self:start;transition:background .2s ease,transform .2s ease}
+.callback-form__button:hover{background:var(--seal-dark);transform:translateY(-2px)}
+.callback-form__button:active{transform:none}
+.callback-form__button:disabled{opacity:.62;cursor:progress;transform:none}
+.callback-form__spinner{display:none;width:17px;height:17px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:callback-spin .7s linear infinite}
+.callback-form.is-busy .callback-form__spinner{display:block}
+.callback-form__legal{color:var(--ink-3);font-size:var(--t-xs);line-height:1.5;max-width:58ch}
+.callback-form__status{font-size:var(--t-sm);color:var(--ink-2);min-height:1.4em}
+.callback-form__status.is-error{color:#A32A22}
+.callback-form__honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+.callback-success{text-align:center;padding:var(--space-4) 0;outline:none}
+.callback-success__mark{width:112px;height:112px;margin-inline:auto;color:var(--seal)}
+.callback-success__title{font-size:var(--t-lg);margin-top:var(--space-3)}
+.callback-success__text{color:var(--ink-2);font-size:var(--t-sm);margin-top:var(--space-2)}
+.callback-success__again{min-height:44px;margin-top:var(--space-4);border:0;border-bottom:1px solid var(--seal);background:transparent;color:var(--seal);font:inherit;font-size:var(--t-sm);cursor:pointer}
+.footer__docs{flex-basis:100%;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:var(--t-xs)}
+.footer__docs a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(241,242,239,.3)}
+.doc-top{border-bottom:1px solid var(--line)}
+.doc-top__in{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);min-height:72px}
+.doc-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.doc-brand__glyph{font-family:var(--font-display);font-size:1.7rem;color:var(--seal);line-height:1}
+.doc-brand__text{font-family:var(--font-display);font-size:1.2rem}
+.doc-top__tel{font-size:var(--t-sm);font-weight:600;text-decoration:none;white-space:nowrap}
+.doc{padding-block:clamp(2rem,5vw,3.5rem) clamp(3.5rem,8vw,6rem)}
+.doc__in{max-width:46rem}
+.doc__back{display:inline-flex;align-items:center;min-height:44px;font-size:var(--t-sm);color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal-soft)}
+.doc__title{font-size:var(--t-xl);margin-top:var(--space-4)}
+.doc__date{color:var(--ink-3);font-size:var(--t-sm);margin-top:var(--space-2)}
+.doc__lead{margin-top:var(--space-5);font-size:var(--t-md)}
+.doc__part{margin-top:var(--space-6);padding-top:var(--space-4);border-top:1px solid var(--line)}
+.doc__part h2{font-size:var(--t-lg)}
+.doc__part p,.doc__part li{color:var(--ink-2);max-width:65ch}
+.doc__part p{margin-top:var(--space-3)}
+.doc__part ul{margin-top:var(--space-2);display:grid;gap:.4rem}
+.doc__part li{position:relative;padding-left:1.4rem}
+.doc__part li::before{content:'';position:absolute;left:0;top:.8em;width:.7rem;height:1px;background:var(--seal)}
+.doc a:not(.doc__back):not(.doc-brand):not(.doc-top__tel){color:var(--seal);text-underline-offset:.18em}
+@keyframes callback-spin{to{transform:rotate(360deg)}}
+@media (max-width:860px){.callback__in{grid-template-columns:1fr;gap:var(--space-5)}.callback__lead{max-width:48ch}}
+@media (max-width:560px){.callback-form__fields{grid-template-columns:1fr}.callback-form__button{width:100%}.doc-top__in{min-height:60px}.doc-top__tel{font-size:var(--t-xs)}}
+@media (prefers-reduced-motion:reduce){.callback-form__button,.callback-field__input{transition:none}.callback-form__spinner{animation-duration:1.5s}}
